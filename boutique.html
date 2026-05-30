@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boutique — Ruroni CrossFit</title>
+  <meta name="description" content="Le merch officiel de Ruroni CrossFit : t-shirts, hoodies, accessoires. Édition Ronin." />
+  <link rel="icon" type="image/png" href="images/logo-mono.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="index.html" class="header__logo">
+      <img src="images/logo-mono.png" alt="Ruroni CrossFit" />
+      <span class="header__brand">RURONI<span>CROSSFIT · SINCE 2015</span></span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Accueil</a>
+      <a href="la-box.html">La Box</a>
+      <a href="coachs.html">L'Équipe</a>
+      <a href="cours-tarifs.html">Cours & Tarifs</a>
+      <a href="planning.html">Planning</a>
+      <a href="boutique.html" class="active">Boutique</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" data-trigger="trial-modal" class="btn">Séance d'essai</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="page-title">
+  <div class="container page-title__content">
+    <span class="eyebrow">Édition Ronin · Powered by Shopify</span>
+    <h1 style="margin-top:1rem;">Boutique</h1>
+    <div class="breadcrumb"><a href="index.html">Accueil</a><span>/</span>Boutique</div>
+  </div>
+</section>
+
+<!-- Bandeau démo -->
+<div class="shop-intro">
+  <div class="container">
+    ⓘ <strong>DÉMO</strong> · Cette boutique simule le rendu Shopify Buy Button. En production, chaque carte sera remplacée par un widget Shopify (catalogue + checkout hébergés chez Shopify, intégration transparente).
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Le merch officiel</span>
+      <h2>Affiche ton statut de Ronin</h2>
+      <p>T-shirts, hoodies, accessoires : conçus pour s'entraîner, pensés pour durer. Livraison France 5,90€ · gratuite dès 80€.</p>
+    </div>
+
+    <div class="shop-filter" id="shop-filter"></div>
+
+    <div class="products" id="shop-products"></div>
+
+    <p class="text-center" style="margin-top:3rem; color:var(--text-mute); font-size:0.85rem;">
+      🥋 Tu cherches du matériel d'entraînement (grips, ceintures, chaussures) ? Demande à l'accueil de la box, on a des prix membres sur nos partenaires.
+    </p>
+  </div>
+</section>
+
+<!-- Avantages -->
+<section class="section" style="background:var(--bg-mid);">
+  <div class="container">
+    <div class="programs">
+      <div class="program">
+        <span class="program__num">LIVRAISON</span>
+        <h3 class="program__title">Expédition rapide</h3>
+        <p class="program__desc">Préparation sous 48h. Livraison Colissimo 2-3 jours partout en France. Retrait gratuit à la box.</p>
+      </div>
+      <div class="program">
+        <span class="program__num">PAIEMENT</span>
+        <h3 class="program__title">100% sécurisé</h3>
+        <p class="program__desc">CB, Apple Pay, Google Pay, Klarna. Checkout sécurisé Shopify, conforme PSD2 et RGPD.</p>
+      </div>
+      <div class="program">
+        <span class="program__num">RETOURS</span>
+        <h3 class="program__title">14 jours pour changer d'avis</h3>
+        <p class="program__desc">Article non porté, étiquette conservée : remboursé ou échangé sans poser de questions.</p>
+      </div>
+      <div class="program">
+        <span class="program__num">MEMBRES</span>
+        <h3 class="program__title">-15% adhérents Ruroni</h3>
+        <p class="program__desc">Code promo dédié communiqué chaque mois par mail. Réservé aux abonnements actifs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Tu as une idée de produit ?</h2>
+    <p>Édition limitée Battle des Ronins, tank top pour l'été, design d'un membre... Propose-nous tes idées, on les fait peut-être.</p>
+    <a href="contact.html" class="btn">Suggérer un produit</a>
+  </div>
+</section>
+
+<!-- Cart FAB -->
+<button id="cart-fab" class="cart-fab" aria-label="Voir le panier">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+  <span class="cart-fab__badge" id="cart-badge">0</span>
+</button>
+
+<!-- Cart drawer -->
+<div class="cart-backdrop" id="cart-backdrop"></div>
+<aside class="cart-drawer" id="cart-drawer" role="dialog" aria-label="Panier">
+  <div class="cart-drawer__head">
+    <h3>Ton panier</h3>
+    <button class="cart-drawer__close" id="cart-close" aria-label="Fermer">×</button>
+  </div>
+  <div class="cart-drawer__items" id="cart-items"></div>
+  <div class="cart-drawer__foot">
+    <div class="cart-drawer__row">
+      <span>Sous-total</span>
+      <span id="cart-subtotal">0€</span>
+    </div>
+    <div class="cart-drawer__row">
+      <span>Livraison</span>
+      <span>Calculée au checkout</span>
+    </div>
+    <div class="cart-drawer__row cart-drawer__row--total">
+      <span>Total</span>
+      <span id="cart-total">0€</span>
+    </div>
+    <button id="cart-checkout" class="btn cart-drawer__checkout" disabled>Procéder au paiement</button>
+    <p class="cart-drawer__note">🔒 Checkout sécurisé Shopify · CB / Apple Pay / Klarna</p>
+  </div>
+</aside>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <img src="images/logo-mono.png" alt="Ruroni CrossFit" />
+        <p>Ta box CrossFit à Saint-Ouen depuis 2015. 550 m² indépendants pour repousser tes limites.</p>
+      </div>
+      <div class="footer__col">
+        <h4>NAVIGATION</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="la-box.html">La Box</a></li>
+          <li><a href="coachs.html">L'Équipe</a></li>
+          <li><a href="cours-tarifs.html">Cours & Tarifs</a></li>
+          <li><a href="planning.html">Planning</a></li>
+          <li><a href="boutique.html">Boutique</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>CONTACT</h4>
+        <ul>
+          <li>29 bis rue du Dr Léonce Basset</li>
+          <li>93400 Saint-Ouen</li>
+          <li><a href="tel:+33607524117">+33 6 07 52 41 17</a></li>
+          <li><a href="mailto:ruronicrossfit@gmail.com">ruronicrossfit@gmail.com</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>SUIVEZ-NOUS</h4>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/ruroni_crossfit/" target="_blank" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div>© 2026 Ruroni CrossFit · Tous droits réservés</div>
+      <div>You against you · Since 2015</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
